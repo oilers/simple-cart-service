@@ -58,6 +58,6 @@ public class Product {
 
     public String toString(){
         NumberFormat currencyInstance = NumberFormat.getCurrencyInstance();
-        return "1 " + name + " at " + currencyInstance.format(price);
+        return "1 " + (imported?"imported " :"") + name + " at " + currencyInstance.format(price);
     }
 }

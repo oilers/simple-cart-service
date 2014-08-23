@@ -12,10 +12,6 @@ public class CartItem {
     private BigDecimal salesTax;
     private int quantity = 1;
 
-    public BigDecimal getSalesTax() {
-        return salesTax;
-    }
-
     public void setSalesTax(BigDecimal salesTax) {
         this.salesTax = salesTax;
     }
@@ -26,10 +22,6 @@ public class CartItem {
 
     public void setProduct(Product product) {
         this.product = product;
-    }
-
-    public Product getProduct() {
-        return product;
     }
 
     public BigDecimal getTotalPrice() {
@@ -62,6 +54,6 @@ public class CartItem {
 
     public String toString(){
         NumberFormat currencyInstance = NumberFormat.getCurrencyInstance();
-        return quantity + " " + product.getName() + ": " + currencyInstance.format(getTotalPrice());
+        return quantity + " " + (product.isImported()? "imported " :"")+ product.getName() + ": " + currencyInstance.format(getTotalPrice());
     }
 }

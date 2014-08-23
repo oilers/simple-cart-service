@@ -9,7 +9,6 @@ import org.oilers.cart.service.CartService;
 import java.math.BigDecimal;
 import java.text.NumberFormat;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 /**
@@ -67,17 +66,17 @@ public class Runner {
 
     private static List<Product> getProductsForCart2() {
         List<Product> products = new ArrayList<>();
-        products.add(new Product("imported box of chocolates", ProductType.FOOD, 10., true));
-        products.add(new Product("imported bottle of perfume", ProductType.OTHER, 47.5, true));
+        products.add(new Product("box of chocolates", ProductType.FOOD, 10., true));
+        products.add(new Product("bottle of perfume", ProductType.OTHER, 47.5, true));
         return products;
     }
 
     private static List<Product> getProductsForCart3() {
         List<Product> products = new ArrayList<>();
-        products.add(new Product("imported bottle of perfume", ProductType.OTHER, 27.99, true));
+        products.add(new Product("bottle of perfume", ProductType.OTHER, 27.99, true));
         products.add(new Product("bottle of perfume", ProductType.OTHER, 18.99, false));
         products.add(new Product("packet of headache pills", ProductType.MEDICINE, 9.75, false));
-        products.add(new Product("imported box of chocolates", ProductType.FOOD, 11.25, true));
+        products.add(new Product("box of chocolates", ProductType.FOOD, 11.25, true));
         return products;
     }
 }
